@@ -1,0 +1,61 @@
+% ENVIRONMENT DEFINITION
+\newcounter{definition}
+\newenvironment{definition}[1]{
+\definecolor{defcol}{HTML}{2b53a0}
+\begin{tcolorbox}[  arc = 0px, 
+                    boxrule = 1px, 
+                    coltitle = blue,
+                    colback = blue!3,
+                    colframe = defcol!55]
+
+\refstepcounter{definition}
+\large\textbf{\textcolor{defcol}{{\sffamily{1.\thedefinition \quad #1}}}}
+
+
+\bigskip
+}
+{
+\medskip
+\end{tcolorbox}
+}
+
+
+% CENTERPIECE PLACEMENT
+\begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west, 
+        xshift=17.5cm, 
+        yshift=-16cm] 
+        at (current page.north west) 
+        {
+        
+% CENTERPIECE CONTENT
+\begin{minipage}{.301\textwidth}
+\begin{center}
+    {\vspace{2mm}{\Huge \bf Mat 1 spillet} \\ \vspace{2mm}}
+\end{center}
+
+\begin{definition}{Skemaer}
+\begin{description}
+    \item \textbf{A:}
+    \item \textbf{B:}
+    \item \textbf{C:} Du er på Skema C, så det første du gør er at vælge et af de to andre skemar, som du streamer fremover. Når der er $n$ skema-specifikke tårer til det du streamer, tager du $\frac{n}{2}$ tårer
+\end{description}
+\end{definition}
+
+
+\begin{definition}{Hjemmeopgavesæt}
+På baggrund af romertallet, som du har fået på dit hjemmeopgavesæt, må du give et antal tårer ud.
+\begin{center}
+\begin{tabular}{c|c|c|c}
+     I & II & III & IV \\ \hline
+     10 & 6 & 4 & 2 
+\end{tabular}
+\end{center}
+\end{definition}
+
+    
+\end{minipage}
+        
+}; 
+\end{tikzpicture}
+% \backgroundsetup{contents=\includegraphics{pictures/michael.png}, scale=1, angle=0, opacity=.7}

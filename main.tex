@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usepackage{parskip}
+\usepackage{makecell}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{background}
+\backgroundsetup{contents={}}
+\usepackage{tcolorbox}
+
+
+\usepackage[paperwidth=48cm, paperheight=45cm, margin=3cm]{geometry}
+\begin{document}
+
+
+\input{board/field}
+\input{board/centerpiece}
+\renewcommand{\tabcolsep}{1pt}
+\newcommand{\tabwidth}{4.3cm}
+\begin{center}
+\begin{tabular}{p{\tabwidth}p{\tabwidth}p{\tabwidth}p{\tabwidth}p{\tabwidth}p{\tabwidth}p{\tabwidth}p{\tabwidth}p{\tabwidth}}\hline
+    \input{rows/row1}
+    \input{rows/row2}
+    \input{rows/row3}
+    \input{rows/row4}
+    \input{rows/row5}
+    \input{rows/row6}
+    \input{rows/row7}
+    \input{rows/row8}
+    \input{rows/row9}
+\end{tabular}
+\input{board/borders}
+\end{center}
+\end{document}

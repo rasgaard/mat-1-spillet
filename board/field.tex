@@ -1,0 +1,19 @@
+\newcommand{\fieldh}{4cm}
+\newcommand{\fieldw}{4.1cm}
+
+\newcommand{\field}[2]{
+\begin{tikzpicture}
+\node[draw, minimum height=\fieldh, text width=\fieldw] at (0,0) {
+\begin{center}
+\cellcolor{white}
+\ifx&#2&
+  #1
+\else
+\includegraphics[height=.35\linewidth]{#2}
+
+#1
+\fi
+\end{center}
+};
+\end{tikzpicture}%
+}
